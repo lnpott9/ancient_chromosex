@@ -131,7 +131,7 @@ if (!is.na(rx_chromosex) && !is.na(ry_chromosex) && rx_chromosex == ry_chromosex
 }
 
 # 13. Print data to console, only print header if the file does not yet exist
-output_file <- "chromosex_summary.txt"
+output_file <- Sys.getenv("output_summary_file", unset = "chromosex_summary.txt")
 
 if (!file.exists(output_file)) {
   cat("File_Name\tTotal_Mapped_Reads\tReads_Mapped_to_Sex Chromosomes\tReads_Mapped_to_X\tReads_Mapped_to_Y\tR_y\tRy_Lower_95_CI_Bound\tRy_Upper_95_CI_Bound\tR_y_Chromosex\tR_x\tRx_Lower_95_CI_Bound\tRx_Upper_95_CI_Bound\tP_Value\tR_x_Chromosex\tConsensus_Chromosex\n", file = output_file)
