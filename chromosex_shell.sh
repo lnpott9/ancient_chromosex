@@ -23,6 +23,5 @@ for bam_file in "$input_folder"/*.bam; do
 	Rscript chromosex.r "$output_file"
 done
 
-# 6. remove intermediate bai, bam, and idxstats files
+# 6. remove intermediate idxstats files
 rm $input_folder/*idxstats
-rm $input_folder/*.bam*
