@@ -6,7 +6,7 @@
 input_folder="<path/to/input/folder>"
 
 # 3. designate output file name
-output_summary_file="<outputfilename.txt>"
+export output_summary_file="pialq_phaseii_chromosex_summary.txt"
 
 # 4. load R and samtools
 module load R 
